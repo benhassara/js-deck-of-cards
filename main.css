@@ -27,7 +27,7 @@ button:hover {
   border: 2px black solid
 }
 
-#reset {
+#reset, #redeal {
   visibility: hidden;
 }
 

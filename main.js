@@ -2,14 +2,24 @@ showCards.onclick = function(){
   var cardContainer = document.getElementById('container');
   cardContainer.innerHTML = "";
   displayCards();
+  showCards.setAttribute('style', "display: none");
   var btnReset = document.getElementById("reset");
   btnReset.setAttribute('style', "visibility: visible");
+  redeal.setAttribute('style', "visibility: visible");
 };
 
 reset.onclick = function() {
   var cardContainer = document.getElementById("container");
   cardContainer.innerHTML = "";
   reset.setAttribute('style', "visibility: hidden");
+  redeal.setAttribute('style', "visibility: hidden");
+  showCards.setAttribute('style', "display: block");
+};
+
+redeal.onclick = function() {
+  var cardContainer = document.getElementById('container');
+  cardContainer.innerHTML = "";
+  displayCards();
 };
 
 function displayCards(){
@@ -22,7 +32,6 @@ function displayCards(){
     var cardContainer = document.getElementById('container');
     cardContainer.appendChild(card);
     card.style.backgroundImage = "url(images/" + shuffledCards[i].suit + "-" + shuffledCards[i].card + ".png" + ")";
-
   }
 }
 
