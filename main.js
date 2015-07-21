@@ -62,3 +62,14 @@ function shuffleCards(deck) {
   }
   return shuffled;
 }
+
+function inPlaceShuffle(htmlColl) {
+  for (var i = htmlColl.length - 1; i >= 0; i--) {
+    var tmp = htmlColl[i];
+    console.log(tmp);
+    var rand = Math.floor(Math.random * htmlColl.length);
+    htmlColl[i] = htmlColl[rand];
+    htmlColl[rand] = tmp;
+  }
+  return htmlColl;
+}
